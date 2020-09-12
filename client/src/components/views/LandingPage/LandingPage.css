@@ -1,0 +1,12 @@
+.Landing-container {
+  background-color: white;
+}
+
+.slider-image {
+  height: 500px;
+}
+
+.slider-image img {
+  width: 100%;
+  height: 100%;
+}

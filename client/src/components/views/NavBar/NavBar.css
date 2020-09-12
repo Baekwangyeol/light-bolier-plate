@@ -1,0 +1,69 @@
+/* NavBar*/
+#navbar {
+  display: flex; /* flex박스만들기 블럭형태 해제*/
+  justify-content: space-between; /* 수평축이고 양쪽으로 밀기위해 space between*/
+  align-items: center; /* 이제 높이를 중심으로*/
+  background-color: black;
+  color: white;
+  padding: 16px;
+}
+
+.navbar__menu {
+  display: flex;
+}
+.navbar__logo {
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.navbar__menu__item {
+  padding: 8px 12px;
+  margin: 0 4px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.navbar__menu__item.active {
+  border: 1px solid white;
+}
+.navbar__menu__item:hover {
+  background-color: grey;
+}
+.nav__toggle {
+  position: absolute;
+  right: 32px;
+  font-size: 32px;
+  display: none;
+  cursor: pointer;
+  border: 1px solid #fff;
+  padding: 5px;
+  border-radius: 3px;
+}
+.nav__toggle:hover {
+  background-color: grey;
+}
+
+@media screen and (max-width: 768px) {
+  #navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 8px 24px;
+  }
+
+  .navbar__menu {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  .navbar__menu__item {
+    width: 100%;
+    text-align: center;
+  }
+  .nav__toggle {
+    display: block;
+  }
+  .navbar__menu.active {
+    display: flex;
+  }
+}
